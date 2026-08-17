@@ -1,0 +1,30 @@
+{
+  "model": "resnet18alpha075_cv2024_indomain_distilled_from_dinov3s",
+  "alpha": 0.75,
+  "stem_width": 24,
+  "stage_widths": [24, 40, 32, 96],
+  "best_epoch": 7,
+  "best_val_accuracy": 0.8497,
+  "best_val_macro_f1": 0.6465,
+  "total_wall_seconds": 2039.9,
+  "gpu": "T4",
+  "n_train": 37607,
+  "n_val": 16132,
+  "n_epochs": 8,
+  "batch_size": 64,
+  "flops_audit": {
+    "model": "resnet18alpha0.75_cv2024_indomain_distilled_from_dinov3s",
+    "alpha": 0.75,
+    "stem_width": 24,
+    "stage_widths": [24, 40, 32, 96],
+    "params_M": 0.399954,
+    "fp32_size_mb": 1.5257034301757812,
+    "flops_G_per_image_fwd": 0.351130624,
+    "gpu": "T4"
+  },
+  "student_checkpoint_path": "/data/exp015_cv2024_indomain_pipeline/stage1/resnet18alpha075_cv2024_indomain_distilled_student.pt",
+  "student_checkpoint_local_path": "experiments/15-cv2024-augmented-pipeline/checkpoints/resnet18alpha075_cv2024_indomain_distilled_student.pt",
+  "modal_app_id": "ap-UluyQO0oneugQJK46nCzfM",
+  "note": "Results reconstructed from per-epoch log output + volume checkpoint download (spawn()-only entrypoint, no local .remote() wait). See stage1_per_epoch_summary.json for the full per-epoch table.",
+  "per_epoch_summary_file": "stage1_per_epoch_summary.json"
+}

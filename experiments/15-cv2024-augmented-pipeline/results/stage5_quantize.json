@@ -1,0 +1,334 @@
+{
+  "checkpoint": "/data/exp015_cv2024_indomain_pipeline/stage4/resnet18_alpha075_pruned_lowrank_finetuned_student.pt",
+  "stage_widths": [
+    24,
+    32,
+    26,
+    77
+  ],
+  "target_ranks": {
+    "layer3.0.conv1": 20,
+    "layer3.0.conv2": 20,
+    "layer3.1.conv1": 20,
+    "layer3.1.conv2": 19,
+    "layer4.0.conv1": 44,
+    "layer4.0.conv2": 45,
+    "layer4.1.conv1": 40,
+    "layer4.1.conv2": 30
+  },
+  "n_train": 37607,
+  "n_val_full": 16132,
+  "n_val_sanity_subsample": 1868,
+  "n_calibration_images": 400,
+  "quantization_engine": "fbgemm",
+  "fresh_pr_profile": {
+    "layer1": 0.13137254118919373,
+    "layer2": 0.16737917065620422,
+    "layer3": 0.23830705422621506,
+    "layer4": 0.1106552891917043,
+    "fc": 0.1106552891917043
+  },
+  "per_tensor_module_prefixes": [
+    "layer4",
+    "fc",
+    "layer1"
+  ],
+  "per_channel_module_prefixes": [
+    "layer2",
+    "layer3"
+  ],
+  "fp32": {
+    "metrics": {
+      "val_accuracy": 0.7098501070663812,
+      "val_macro_f1": 0.7249083151034624,
+      "class_order": [
+        "Angioectasia",
+        "Bleeding",
+        "Erosion",
+        "Erythema",
+        "Foreign Body",
+        "Lymphangiectasia",
+        "Normal",
+        "Polyp",
+        "Ulcer",
+        "Worms"
+      ],
+      "confusion_matrix": [
+        [
+          129,
+          5,
+          17,
+          2,
+          4,
+          0,
+          35,
+          8,
+          0,
+          0
+        ],
+        [
+          8,
+          170,
+          7,
+          6,
+          0,
+          0,
+          5,
+          4,
+          0,
+          0
+        ],
+        [
+          12,
+          2,
+          124,
+          14,
+          5,
+          2,
+          23,
+          14,
+          3,
+          1
+        ],
+        [
+          2,
+          5,
+          56,
+          85,
+          1,
+          0,
+          27,
+          24,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          13,
+          0,
+          158,
+          3,
+          16,
+          7,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          10,
+          1,
+          2,
+          149,
+          25,
+          13,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          194,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          9,
+          19,
+          13,
+          5,
+          11,
+          51,
+          90,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          15,
+          1,
+          0,
+          0,
+          5,
+          5,
+          171,
+          2
+        ],
+        [
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          56
+        ]
+      ]
+    },
+    "size_mb": 0.763056755065918,
+    "latency_ms": {
+      "mean_ms": 6.4918238599997835,
+      "std_ms": 0.22548901148886136,
+      "median_ms": 6.436876500000466
+    }
+  },
+  "int8_pr_informed_granularity": {
+    "metrics": {
+      "val_accuracy": 0.7103854389721628,
+      "val_macro_f1": 0.7256628600664039,
+      "class_order": [
+        "Angioectasia",
+        "Bleeding",
+        "Erosion",
+        "Erythema",
+        "Foreign Body",
+        "Lymphangiectasia",
+        "Normal",
+        "Polyp",
+        "Ulcer",
+        "Worms"
+      ],
+      "confusion_matrix": [
+        [
+          128,
+          6,
+          19,
+          3,
+          4,
+          0,
+          34,
+          6,
+          0,
+          0
+        ],
+        [
+          6,
+          171,
+          8,
+          6,
+          1,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        [
+          12,
+          3,
+          125,
+          13,
+          5,
+          1,
+          26,
+          11,
+          3,
+          1
+        ],
+        [
+          1,
+          5,
+          53,
+          88,
+          1,
+          0,
+          26,
+          26,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          13,
+          0,
+          160,
+          2,
+          15,
+          7,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          12,
+          1,
+          1,
+          148,
+          26,
+          12,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          195,
+          2,
+          0,
+          0
+        ],
+        [
+          4,
+          8,
+          23,
+          14,
+          5,
+          8,
+          54,
+          84,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          15,
+          1,
+          0,
+          0,
+          5,
+          4,
+          172,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          56
+        ]
+      ]
+    },
+    "size_mb": 0.23255062103271484,
+    "latency_ms": {
+      "mean_ms": 3.4045093000000293,
+      "std_ms": 0.053081718189634565,
+      "median_ms": 3.4120875000027695
+    }
+  },
+  "fp32_checkpoint_path": "/data/exp015_cv2024_indomain_pipeline/stage5/noquant_fp32_state_dict.pt",
+  "int8_checkpoint_path": "/data/exp015_cv2024_indomain_pipeline/stage5/prquant_int8_state_dict.pt"
+}

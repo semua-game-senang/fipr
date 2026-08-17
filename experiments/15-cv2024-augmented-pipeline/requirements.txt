@@ -1,0 +1,18 @@
+# exp015: FIPR critical path (augmented) + Capsule Vision 2024 zero-shot eval
+#
+# This experiment's actual heavy dependencies (torch, torchvision,
+# transformers, scikit-learn, pandas, numpy, pillow, thop, requests) run
+# INSIDE Modal's remote container images, declared per-script via
+# `modal.Image.debian_slim(...).pip_install(...)` -- they are installed
+# automatically on Modal's infrastructure, not on your local machine.
+#
+# The only package your LOCAL machine needs is the Modal client, to submit
+# jobs and download results/checkpoints.
+modal>=0.63
+
+# Optional, only needed if you want to load/inspect the downloaded result
+# JSON files or .pt checkpoints locally (e.g. in a notebook) rather than
+# just reading the JSON with the stdlib.
+numpy>=1.24
+pandas>=2.0
+torch>=2.0

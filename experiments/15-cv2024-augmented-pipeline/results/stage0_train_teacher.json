@@ -1,0 +1,19 @@
+{
+  "best_epoch": 5,
+  "best_val_accuracy": 0.9215224398710637,
+  "best_val_macro_f1": 0.8082807015192749,
+  "checkpoint_path": "/data/exp015_cv2024_indomain_pipeline/stage0/dinov3_teacher_cv2024_indomain.pt",
+  "checkpoint_local_path": "experiments/15-cv2024-augmented-pipeline/checkpoints/dinov3_teacher_cv2024_indomain.pt",
+  "total_wall_seconds": 3324.1,
+  "gpu": "T4",
+  "n_train": 37607,
+  "n_val": 16132,
+  "n_epochs": 6,
+  "batch_size": 96,
+  "classes": ["Angioectasia", "Bleeding", "Erosion", "Erythema", "Foreign Body",
+              "Lymphangiectasia", "Normal", "Polyp", "Ulcer", "Worms"],
+  "training_protocol": "cv2024_indomain_own_train_val_split",
+  "modal_app_id": "ap-xqGRBVek0nXmHYbtYRvhxk",
+  "note": "Results reconstructed from per-epoch log output + volume checkpoint download, since the local_entrypoint used spawn()-only (fire-and-forget) and did not itself poll for the return value. See stage0_per_epoch_summary.json for the full per-epoch table.",
+  "per_epoch_summary_file": "stage0_per_epoch_summary.json"
+}
